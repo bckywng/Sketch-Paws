@@ -49,7 +49,7 @@ class Poses {
             icon: "cat_04",
             description: "Boat Pose is the secret to building a solid core. Whether you're a cat who loves water (we see you, Bengals) or one who loathes it, you will feel super strong and supported when you nail this pose.",
             steps: ["From a seated position, lengthen your legs out in front of you and take your hands underneath your knees.","Draw your knees towards your chest and start to raise the feet off the ground.", "Point your toes, look forward, and try to lift your toes in line with your eye line.", "If you can, release and extend your arms towards your toes.", "Keep looking forward, balancing on your sitting bones and squeezing your core!"],
-            topTop: "reach your arms up over your head for an extra challenge!"
+            topTip: "reach your arms up over your head for an extra challenge!"
         ),
         Pose(
             name: "Child’s Pose",
