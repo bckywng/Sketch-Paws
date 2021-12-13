@@ -9,6 +9,7 @@ import SwiftUI
 
 struct DetailView: View {
     let pose: Pose
+    @State private var timerOpen = false
     var body: some View {
         ZStack {
             Color("Secondary")
@@ -17,7 +18,7 @@ struct DetailView: View {
                 VStack(spacing:20) {
                     Image(pose.icon)
                         .resizable()
-                        .frame(width: 300, height: 300)
+                        .frame(width: 200, height: 200)
                     Text(pose.name)
                         .font(.system(size: 36))
                         .fontWeight(.bold)
@@ -41,7 +42,9 @@ struct DetailView: View {
                 .padding(.horizontal, 20)
                 .multilineTextAlignment(.center)
             }
-
+            TimerPanelView(timerOpen: $timerOpen)
+        }.onTapGesture {
+            timerOpen = false
         }
     }
 }
@@ -58,5 +61,38 @@ struct DetailView_Previews: PreviewProvider {
             topTip: "bend your knees in order to create more length through the spine."
         )
         )
+    }
+}
+
+
+struct TimerPanelView: View {
+    @Binding var timerOpen: Bool
+    var body: some View {
+        VStack {
+            Spacer()
+            VStack {
+                timerOpen ? AnyView(TimerOpenView()) : AnyView(TimerClosedView())
+            }
+            .foregroundColor(Color("Secondary"))
+            .frame(maxWidth: .infinity, maxHeight: timerOpen ? 260 : 80)
+            .background(Color("Highlight"))
+            .cornerRadius(6)
+        }
+        .ignoresSafeArea()
+        .onTapGesture {
+            timerOpen.toggle()
+        }
+    }
+}
+
+struct TimerOpenView: View {
+    var body: some View{
+        Text("Hold that pose")
+    }
+}
+
+struct TimerClosedView: View {
+    var body: some View {
+        Text("Try it out")
     }
 }
