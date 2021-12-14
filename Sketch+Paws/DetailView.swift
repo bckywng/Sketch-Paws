@@ -40,6 +40,7 @@ struct DetailView: View {
                     Text(pose.topTip)
                 }
                 .padding(.horizontal, 20)
+                .padding(.bottom, 80)
                 .multilineTextAlignment(.center)
             }
             TimerPanelView(timerOpen: $timerOpen)
