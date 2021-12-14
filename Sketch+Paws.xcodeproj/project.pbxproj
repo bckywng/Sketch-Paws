@@ -10,6 +10,7 @@
 		014702D7276685D100B7F7F4 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014702D6276685D100B7F7F4 /* DetailView.swift */; };
 		014702D92766947900B7F7F4 /* Pose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014702D82766947900B7F7F4 /* Pose.swift */; };
 		01E11AE227680C7C007A6F21 /* YogaTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E11AE127680C7C007A6F21 /* YogaTimer.swift */; };
+		01E11AE427683256007A6F21 /* chime.wav in Resources */ = {isa = PBXBuildFile; fileRef = 01E11AE327683256007A6F21 /* chime.wav */; };
 		01F50ECF2755C78700DCA0FC /* Sketch_PawsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F50ECE2755C78700DCA0FC /* Sketch_PawsApp.swift */; };
 		01F50ED12755C78700DCA0FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F50ED02755C78700DCA0FC /* ContentView.swift */; };
 		01F50ED32755C78900DCA0FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01F50ED22755C78900DCA0FC /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 		014702D6276685D100B7F7F4 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		014702D82766947900B7F7F4 /* Pose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pose.swift; sourceTree = "<group>"; };
 		01E11AE127680C7C007A6F21 /* YogaTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaTimer.swift; sourceTree = "<group>"; };
+		01E11AE327683256007A6F21 /* chime.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = chime.wav; sourceTree = "<group>"; };
 		01F50ECB2755C78700DCA0FC /* Sketch+Paws.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sketch+Paws.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01F50ECE2755C78700DCA0FC /* Sketch_PawsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sketch_PawsApp.swift; sourceTree = "<group>"; };
 		01F50ED02755C78700DCA0FC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				014702D82766947900B7F7F4 /* Pose.swift */,
 				01E11AE127680C7C007A6F21 /* YogaTimer.swift */,
 				01F50ED22755C78900DCA0FC /* Assets.xcassets */,
+				01E11AE327683256007A6F21 /* chime.wav */,
 				01F50ED42755C78900DCA0FC /* Preview Content */,
 			);
 			path = "Sketch+Paws";
@@ -134,6 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01E11AE427683256007A6F21 /* chime.wav in Resources */,
 				01F50ED62755C78900DCA0FC /* Preview Assets.xcassets in Resources */,
 				01F50ED32755C78900DCA0FC /* Assets.xcassets in Resources */,
 			);
