@@ -94,7 +94,7 @@ class Poses {
         Pose(
             name: "Plough Pose",
             asana: "Halasana",
-            icon: "Cat-10",
+            icon: "cat_10",
             description: "Plough Pose can be a deeply relaxing stretch for the spine – and it looks kind of funky too. Your nervous system will thank you for this one! Ahhhh.",
             steps:["Lying on your back, use some momentum to rock back and forth along the spine until you can bring your  feet over your head.","Your feet might rest on the floor behind you or dangle in mid air.","You can support the back with your hands or release them onto the ground, interlacing the fingers."],
             topTip: "To come out of this pose, take the hands to the lower back and lower down slowly."

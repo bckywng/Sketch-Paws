@@ -66,15 +66,17 @@ struct DetailView_Previews: PreviewProvider {
 
 
 struct TimerPanelView: View {
+    
+    @StateObject var yogaTimer = YogaTimer()
     @Binding var timerOpen: Bool
     var body: some View {
         VStack {
             Spacer()
             VStack {
-                timerOpen ? AnyView(TimerOpenView()) : AnyView(TimerClosedView())
+                timerOpen ? AnyView(TimerOpenView(yogaTimer: yogaTimer)) : AnyView(TimerClosedView())
             }
             .foregroundColor(Color("Secondary"))
-            .frame(maxWidth: .infinity, maxHeight: timerOpen ? 440 : 80)
+            .frame(maxWidth: .infinity, maxHeight: timerOpen ? 420 : 80)
             .background(Color("Highlight"))
             .cornerRadius(6)
         }
@@ -86,6 +88,8 @@ struct TimerPanelView: View {
 }
 
 struct TimerOpenView: View {
+    
+    @ObservedObject var yogaTimer: YogaTimer
     var body: some View{
         VStack {
             Text("Hold that pose")
@@ -94,18 +98,18 @@ struct TimerOpenView: View {
             Text("Tray staying in this pose for 30 seconds. If you need to come out sonner, that's ok.")
                 .multilineTextAlignment(.center)
             Spacer()
-            Text("00:30")
+            Text(yogaTimer.timerDuration < 10 ? "00:0\(yogaTimer.timerDuration)" : "00:\(yogaTimer.timerDuration)")
                 .font(.system(size:80))
             Spacer()
             Button{
-                //do something
+                yogaTimer.startTimer()
             } label:{
                 Text("Start the timer")
             }
             .frame(width: 300, height:50)
             .background(Color("Secondary"))
             .foregroundColor(Color("Primary"))
-            .cornerRadius(15)
+            .cornerRadius(30)
             
         }.padding(50)
        

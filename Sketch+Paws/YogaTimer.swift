@@ -7,13 +7,13 @@
 
 import Foundation
 
-class YogaTimer{
+class YogaTimer: ObservableObject {
     
     // Timer states
-    var timerActive = false
-    var timerPaused = false
-    var timerEnded = false
-    var timerDuration = 30
+    @Published var timerActive = false
+    @Published var timerPaused = false
+    @Published var timerEnded = false
+    @Published var timerDuration = 30
     var yogaTimer = Timer()
     
     // Start the Timer
@@ -21,7 +21,7 @@ class YogaTimer{
         timerActive = true
         yogaTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: {Timer in
             self.timerDuration -= 1
-            if self.timerDuration == 0{
+            if self.timerDuration == 0 {
                 self.stopTimer()
             }
         })
